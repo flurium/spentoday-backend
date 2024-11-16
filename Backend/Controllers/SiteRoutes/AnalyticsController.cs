@@ -1,4 +1,5 @@
-﻿using Backend.Auth;
+﻿using Amazon.S3.Model;
+using Backend.Auth;
 using Backend.Services;
 using Data;
 using Lib.EntityFrameworkCore;
@@ -23,7 +24,7 @@ public class AnalyticsController : ControllerBase
         this.db = db;
     }
 
-    public record AnalyticsProduct(string Id, string Name, double Price);
+    public record AnalyticsProduct(string Id, string Name, double Price, int Count);
 
     public record AnalyticsOutput(
         int TotalOrders, int OrdersLastMonth,
@@ -40,7 +41,7 @@ public class AnalyticsController : ControllerBase
             .Where(x => x.ShopId == shopId && x.Shop.OwnerId == uid)
             .OrderByDescending(x => x.OrderProducts.Count())
             .Take(10)
-            .Select(x => new AnalyticsProduct(x.Id, x.Name, x.Price))
+            .Select(x => new AnalyticsProduct(x.Id, x.Name, x.Price, x.OrderProducts.Count()))
             .QueryMany();
 
         var totalOrders = await db.Orders.CountAsync();

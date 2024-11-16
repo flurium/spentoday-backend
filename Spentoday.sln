@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "Data\Data.csproj", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lib", "Lib\Lib.csproj", "{155B7B2D-0FD5-4938-9467-6DF507744CA3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParallelTests", "ParallelTests\ParallelTests.csproj", "{C209CD39-2445-4042-8AC3-3CD3AA15B6EC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{155B7B2D-0FD5-4938-9467-6DF507744CA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{155B7B2D-0FD5-4938-9467-6DF507744CA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{155B7B2D-0FD5-4938-9467-6DF507744CA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C209CD39-2445-4042-8AC3-3CD3AA15B6EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C209CD39-2445-4042-8AC3-3CD3AA15B6EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C209CD39-2445-4042-8AC3-3CD3AA15B6EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C209CD39-2445-4042-8AC3-3CD3AA15B6EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
